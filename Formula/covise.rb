@@ -67,6 +67,7 @@ class Covise < Formula
     cmake_args << "-DCOVISE_USE_CUDA:BOOL=OFF" if build.without? "cuda"
     cmake_args << "-DCOVISE_USE_X11:BOOL=ON" if build.with? "x11"
     cmake_args << "-DCOVISE_USE_X11:BOOL=OFF" if build.without? "x11"
+    cmake_args << "-DCOVISE_BUILD_DRIVINGSIM=ON"
 
     #cmake_args << "-DCOVISE_USE_VIRVO=OFF"
     #cmake_args << "-DCOVISE_BUILD_MODULES=OFF"
